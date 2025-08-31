@@ -6,8 +6,8 @@ from flask import Flask, request, jsonify, send_from_directory
 app = Flask(__name__)
 
 # 一時ファイルのアップロードと変換結果を保存するフォルダ
-UPLOAD_FOLDER = 'uploads'
-CONVERTED_FOLDER = 'converted'
+UPLOAD_FOLDER = '/tmp/uploads'
+CONVERTED_FOLDER = '/tmp/converted'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(CONVERTED_FOLDER, exist_ok=True)
 
