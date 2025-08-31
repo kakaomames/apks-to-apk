@@ -1,9 +1,11 @@
 {
-  "version": 2,
   "builds": [
     {
       "src": "main.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "installCommand": "pip install -r requirements.txt && curl -L https://github.com/google/bundletool/releases/download/1.15.0/bundletool-all-1.15.0.jar -o bundletool.jar"
+      }
     }
   ],
   "routes": [
